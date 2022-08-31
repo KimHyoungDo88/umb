@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="img/엄브렐라.png" type="image/x-icon" />
+  <title>엄브렐라 커피</title>
+  <!-- 부트스트랩 css와js를 링크 -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+
+<style>
+  .nav-item :hover {
+    color: red !important;
+  }
+</style>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-light bg-light  fixed-top" id="nav-scroll">
+    <div class="container">
+
+      <a href="index.html" class="navbar-brand" style="font-size: 45px;">엄브렐라 커피</a>
+
+      <div class="collapse navbar-collapse " id="navBar">
+        <!-- ms-auto : 가운데 여백을 줘서 옆으로 띄워준다  -->
+        <ul class="navbar-nav fw-bold ms-auto">
+          <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            로그인
+          </button>
+          <li class="nav-item ">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="menu.html" class="nav-link">메 뉴</a>
+          </li>
+          <li class="nav-item">
+            <a href="community.html" class="nav-link">커뮤니티</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+
+
+
+
+  <div class="container">
+    <img style="width: 100%; height: 400px;" src="img/빵.jpg" alt="">
+  </div>
+
+
+  <br><br>
+
+  <h2 style="text-align: center;">공지 사항</h2>
+
+  <div class="container">
+    <form class="d-flex" style="position: absolute; right: 300px;">
+      <input class="form-control me-2" style="width: 250px; " type="search" placeholder="닉네임" aria-label="Search">
+      <button class="btn btn-outline-dark" type="submit">검색</button>
+    </form>
+  </div>
+  <br><br><br>
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">NO.</th>
+          <th scope="col">닉네임</th>
+          <th scope="col">내 용</th>
+          <th scope="col">이메일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>응도</td>
+          <td>신메뉴 크림🗝</td>
+          <td>gudeh880@gmail.com</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>무성</td>
+          <td>점장님들 읽어보세요</td>
+          <td>musung87@gmail.com</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">미누</td>
+          <td>minu87@gmail.com</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination" style="justify-content: center; ">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+
+
+
+
+
+
+
+  <br><br><br>
+
+  <footer class="bg-dark bg-size=max-width">
+    <div class="container text-center">
+      <h1>
+        <a href="index.html" class="text-white fst-italic " target="_blank">엄브렐라 커피</a>
+
+      </h1>
+      <div class="text-white">
+        <h6>상호 : 주식회사 엄브렐라 커피｜ 대표이사 : 김형도 ｜ 개인정보책임자 : 강무성</h6>
+        <h6>본사 소재지 : 경상남도 창원시 마산합포구 진동면 진북산업로 43 선우상가 301호｜ 사업자등록번호 :412-19-08342 </h6>
+        <h6> 대표 전화 : 010 2266 7933</h6>
+        <br>
+        <h6>개인정보취급방침 · 이용약관</h6>
+        <h6> UMBRELLA COFFEE COMPANY. All Rights reserved</h6>
+      </div>
+    </div>
+  </footer>
+
+
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-info">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">엄브렐라 커피</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3 row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">ID</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="staticEmail">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="inputPassword">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">닫기</button>
+          <button type="button" class="btn btn-outline-light">로그인</button>
+          <button type="button" class="btn btn-outline-light">회원가입</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- 부트스트랩 css와js를 링크 -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

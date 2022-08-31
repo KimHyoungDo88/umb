@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="img/엄브렐라.png" type="image/x-icon" />
+  <title>엄브렐라 커피</title>
+  <!-- 부트스트랩 css와js를 링크 -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+<style>
+  .nav-item :hover {
+    color: red !important;
+  }
+
+  .card :hover {
+    position: relative;
+    width: 101%;
+    overflow: hidden;
+
+  }
+
+  .card img {
+
+    /* 포스터 크기 조정을 위해 scale 조정 */
+    transform: scale(1.1);
+    transition: all 0.25s linear;
+  }
+
+  .card:hover img {
+
+    transform: scale(1.25);
+  }
+
+  .position-absolute li a {
+    background-color: white;
+    display: block;
+    padding: 2px 3px;
+    color: orange;
+    text-decoration: none;
+    text-align: center;
+
+  }
+
+  /* 타겟의 지정 높이를 조정하여 네비바의 가림을 피할수 있다  */
+  #co:before {
+    content: "";
+    display: block;
+    height: 3em;
+    /* fixed header 높이 만큼 부여 or 브라우저 상단에서 띄워놓기 원하는 높이 */
+    margin-top: -3em;
+    /* 위에서 설정한 높이와 동일한 만큼을 음수로 제공 */
+    visibility: hidden;
+  }
+
+  #non:before {
+    content: "";
+    display: block;
+    height: 3em;
+    margin-top: -3em;
+    visibility: hidden;
+  }
+
+  #smd:before {
+    content: "";
+    display: block;
+    height: 3em;
+    margin-top: -3em;
+    visibility: hidden;
+  }
+
+  #ade:before {
+    content: "";
+    display: block;
+    height: 3em;
+    margin-top: -3em;
+    visibility: hidden;
+  }
+
+  #dst:before {
+    content: "";
+    display: block;
+    height: 3em;
+    margin-top: -3em;
+    visibility: hidden;
+  }
+</style>
+
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-light bg-light  fixed-top" id="nav-scroll">
+    <div class="container">
+
+      <a href="index.html" class="navbar-brand" style="font-size: 45px;">엄브렐라 커피</a>
+
+      <div class="collapse navbar-collapse " id="navBar">
+
+        <!-- ms-auto : 가운데 여백을 줘서 옆으로 띄워준다  -->
+        <ul class="navbar-nav fw-bold ms-auto">
+          <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            로그인
+          </button>
+          <li class="nav-item ">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="menu.html" class="nav-link">메 뉴 <i class="fa fa-angle-down"></i></a>
+            <ul class="position-absolute" style="display: none; list-style: none;">
+              <li><a href="#co">COFFEE</a></li>
+              <li><a href="#non">NON COFFEE</a></li>
+              <li><a href="#smd">SMOOTHIE</a></li>
+              <li><a href="#ade">A D E</a></li>
+              <li><a href="#dst">DESSERT</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="community.html" class="nav-link">커뮤니티</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+
+  <div class="container">
+    <img style="width: 100%; height: 400px; " src="img/커피배경.jpg" alt="">
+
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <div class="container">
+
+    <h2 class="fst-italic" id="co" style=" text-align: center; ">=COFFEE=</h2><br>
+    <div class="row row-cols-4">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="300px" src="img/아메리카노.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center; ">아메리카노</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="300px" src="img/바닐라 라떼.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">바닐라 라떼</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="300px" src="img/카페라떼.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">카페라떼</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="300px" src="img/돌체라떼.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">돌체라떼</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+  <div class="container">
+    <h2 class=fst-italic id="non" style=" text-align: center; ">=NON COFFEE=</h2><br>
+    <div class="row row-cols-4">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="300px" src="img/딸기라떼.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">수제 딸기라떼</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="300px" src="img/녹차라떼.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">녹차라떼</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="300px" src="img/카페라떼.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">죠리퐁라떼</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="300px" src="img/쵸코라떼.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">초코라떼</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+  <div class="container">
+    <h2 class=fst-italic id="smd" style=" text-align: center; ">=SMOOTHIE=</h2><br>
+    <div class="row row-cols-4">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="300px" src="img/딸기요거트스무디.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">딸기요거트스무디</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="300px" src="img/블루베리 스무디.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">블루베리스무디</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="300px" src="img/오렌지 스무디.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">오렌지스무디</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="300px" src="img/유자 스무디.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">유자스무디</p>
+        </div>
+
+      </div>
+    </div>
+    <br>
+
+    <div class="container">
+
+      <div class="row row-cols-4">
+        <div class="col">
+
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img height="300px" src="img/자몽 스무디.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <p class="card-text" style="text-align: center;">자몽스무디</p>
+          </div>
+
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img height="300px" src="img/청포도스무디.png" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <p class="card-text" style="text-align: center;">청포도스무디</p>
+          </div>
+
+        </div>
+        <div class="col">
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+
+  <div class="container">
+    <h2 class=fst-italic id="ade" style=" text-align: center; ">=A D E=</h2><br>
+    <div class="row row-cols-4">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="350px" src="img/레몬에이드.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">레몬 에이드</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="350px" src="img/블루레몬에이드.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">블루레몬에이드</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="350px" src="img/자몽에이드.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">자몽에이드</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="350px" src="img/히비스커스에이드.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">히비스커스에이드</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+
+  <div class="container">
+    <h2 class=fst-italic id="dst" style=" text-align: center; ">=DESSERT=</h2><br>
+    <div class="row row-cols-4">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="img/돼지바 마카롱.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">돼지바 마카롱</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="img/쿠앤크 마카롱.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">쿠앤크 마카롱</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="img/초코 스콘.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">초코칩 스콘</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="img/플레인 스콘.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">플레인 스콘</p>
+        </div>
+
+        <br>
+      </div>
+    </div>
+    <div class="row row-cols-4">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="350px" src="img/우유크림카스테라.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">우유크림카스테라</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="350px" src="img/블루베리 카스테라.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">블루베리샌드</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="350px" src="img/햄치즈샌드.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">햄치즈샌드</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="350px" src="img/에그치즈샌드.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">에그치즈샌드</p>
+        </div>
+
+        <br>
+      </div>
+    </div>
+    <div class="row row-cols-4">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="350px" src="img/블루베리퓨레 크로플.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">블루베리퓨레 크로플</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="350px" src="img/딸기퓨레 크로플.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">딸기퓨레 크로플</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="350px" src="img/초코 크로플.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">초코듬뿍 크로플</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="350px" src="img/시나모 크로플.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">시나몬 크로플</p>
+        </div>
+
+        <br>
+      </div>
+    </div>
+    <div class="row row-cols-4">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="350px" src="img/커피콩빵.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">커피콩빵</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="350px" src="img/초코 케익.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">초코 케이크</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="350px" src="img/크림케익.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">화이트크림케이크</p>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img height="350px" src="img/치즈케익.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="text-align: center;">크림치즈케이크</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <br><br><br>
+
+  <footer class="bg-dark bg-size=max-width">
+    <div class="container text-center">
+      <h1>
+        <a href="index.html" class="text-white fst-italic " target="_blank">엄브렐라 커피</a>
+
+      </h1>
+      <div class="text-white">
+        <h6>상호 : 주식회사 엄브렐라 커피｜ 대표이사 : 김형도 ｜ 개인정보책임자 : 강무성</h6>
+        <h6>본사 소재지 : 경상남도 창원시 마산합포구 진동면 진북산업로 43 선우상가 301호｜ 사업자등록번호 :412-19-08342 </h6>
+        <h6> 대표 전화 : 010 2266 7933</h6>
+        <br>
+        <h6>개인정보취급방침 · 이용약관</h6>
+        <h6> UMBRELLA COFFEE COMPANY. All Rights reserved</h6>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-info">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">엄브렐라 커피</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3 row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">ID</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="staticEmail">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="inputPassword">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">닫기</button>
+          <button type="button" class="btn btn-outline-light">로그인</button>
+          <button type="button" class="btn btn-outline-light">회원가입</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>
+    $('nav li').hover(
+
+      function () {
+        $('ul', this).stop().slideDown(200);
+      },
+      function () {
+        $('ul', this).stop().slideUp(200);
+      }
+
+    );
+  </script>
+
+
+
+
+
+
+
+  <!-- 부트스트랩 css와js를 링크 -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
